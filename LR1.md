@@ -9,7 +9,8 @@
 **apt** – пакетный менеджер для управления пакетами
 
 **пакеты** — это архивы, содержащие программное обеспечение, библиотеки, конфигурационные файлы и метаданные, необходимые для установки и управления программами в системе. Пакеты упрощают установку, обновление и удаление программ, а также управление зависимостями между ними.
-![image](https://github.com/user-attachments/assets/00a1256f-0e99-409e-b418-f93b20f1b1fc)
+![image](https://github.com/user-attachments/assets/19cf37f8-8e9c-4f39-9cfd-3280f76ca4a9)
+
 
 
 1. [**http://security.debian.org/debian-security**](http://security.debian.org/debian-security) **bookworm-security InRelease**:
