@@ -121,7 +121,8 @@ PostgreSQL.
 
 После этого для нового пользователя создали базу данных, так же используя PSQL-запись:
 
-![image](https://github.com/user-attachments/assets/f94661a0-ad8c-477f-8216-4671ca1379fc)
+![image](https://github.com/user-attachments/assets/8a451ccd-91b5-4e27-9120-232b01a24089)
+
 
 
 # CREATE DATABASE &lt;dbName&gt; OWNER &lt;userName&gt
