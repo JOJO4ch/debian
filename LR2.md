@@ -39,7 +39,7 @@
 > Для создания резервной копии базы данных была
 > выполнена следующая команда:
 >```bash
->pg_dump -U postgres -Fc -f dbtsimbakiuka_backup.dump dbtsimbaliuka
+>pg_dump -U postgres -Fc -f postgres_backup.dump postgres
 >```
 ![image](https://github.com/user-attachments/assets/6f8d29cc-7215-4e22-b652-f6bb9bfc8f3f)
 
@@ -49,8 +49,8 @@
 - `pg_dump` — утилита для создания резервных копий базы данных PostgreSQL;
 - `-U postgres` — указание пользователя PostgreSQL (в данном случае `postgres`);
 - `-Fc` — формат **custom**, который сжимает дамп и позволяет при восстановлении выбрать, какие данные восстанавливать;
-- `-f dbtsimbaliuka_backup.dump` — путь и имя файла для резервной копии;
-- `dbtsimbaliuka` — имя базы данных, которую нужно сохранить.
+- `-f postgres_backup.dump` — путь и имя файла для резервной копии;
+- `postgres` — имя базы данных, которую нужно сохранить.
 
 **Альтернативные параметры и их назначение:**
 
@@ -67,9 +67,9 @@
 ## 3. **Частичное (выборочное) резервное копирование**
 
 > Для создания резервной копии **отдельной** таблицы в базе данных  
-> `dbtsimbaliuka` была использована следующая команда:
+> `postgres` была использована следующая команда:
 > ```bash
-> pg_dump -U postgres -Fc -f selected_tables_backup.dump -t public.cars dbtsimbaliuka
+> pg_dump -U postgres -Fc -f selected_tables_backup.dump -t public.slaves2 postgres
 > ```
 > ![image](https://github.com/user-attachments/assets/44100430-ead5-44e5-a3fe-2a616179c6cd)
 > ![image](https://github.com/user-attachments/assets/c66082e9-dee1-4502-83e2-d9b525d8c957)
@@ -104,7 +104,7 @@
 
 ## 5. **Автоматизация бэкапов с помощью cron**
 
-Для того чтобы настроить `cron` для автоматического создания и удаления резервных копий базы данных `dbtsimbaliuka`, действуем по следующим шагам:
+Для того чтобы настроить `cron` для автоматического создания и удаления резервных копий базы данных `postgres`, действуем по следующим шагам:
 
 > **5.1.** Открываем файл `crontab` командой:
 >
@@ -120,7 +120,7 @@
 > - **Первая команда** создаёт резервную копию каждые 2 минуты:
 >
 >   ```bash
->   */2 * * * * pg_dump -U postgres -Fc -f /home/jojo/backups/dpostgres_$(date +\%Y\%m\%d\%H\%M).dump dbtsimbaliuka
+>   */2 * * * * pg_dump -U postgres -Fc -f /home/jojo/backups/dpostgres_$(date +\%Y\%m\%d\%H\%M).dump postgres
 >   ```
 >
 > - **Вторая команда** удаляет файлы старше 15 минут:
