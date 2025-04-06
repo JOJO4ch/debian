@@ -162,7 +162,7 @@ PostgreSQL должен прочитать все строки в таблице
 - если условие нарушено — вызывать RAISE EXCEPTION;
 - иначе — разрешать операцию.
 
-Создаем триггурную функцию:
+Создаем триггерную функцию:
 
             CREATE OR REPLACE FUNCTION check_amount_before_insert_update()
             RETURNS TRIGGER AS $$
