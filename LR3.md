@@ -144,9 +144,9 @@ PostgreSQL должен прочитать все строки в таблице
 
 
 
-            SELECT insert_order_check('Тестовый заказ через функцию', NOW()::timestamp, 1500);
+            SELECT insert_order_check('Test order via function', NOW()::timestamp, 1500);
             
-            SELECT insert_order_check('Неверный заказ', NOW()::timestamp, -1500);
+            SELECT insert_order_check('Bad order', NOW()::timestamp, -1500);
 
 ![image](https://github.com/user-attachments/assets/51e18fa7-be31-4e9e-9525-c48c4aff2127)
 
