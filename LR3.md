@@ -188,9 +188,9 @@ PostgreSQL должен прочитать все строки в таблице
 
 Проверяем:
 
-            INSERT INTO orders (order_name, order_date, amount) VALUES ('Нормальный заказ', NOW(), 1500);
+            INSERT INTO orders (order_name, order_date, amount) VALUES ('Good order', NOW(), 1500);
             
-            INSERT INTO orders (order_name, order_date, amount) VALUES ('Плохой заказ', NOW(), -1500);
+            INSERT INTO orders (order_name, order_date, amount) VALUES ('Bad order', NOW(), -1500);
 
 ![image](https://github.com/user-attachments/assets/6e1da790-1b43-43eb-a613-388121e262a9)
 
